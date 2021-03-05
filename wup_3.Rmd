@@ -1,7 +1,7 @@
 ---
 title: "Alcohol vs Seat choice"
-author: "Your Name"
-date: "Fall 2020"
+author: "Cheyenne Toliver"
+date: "Spring 2021"
 output: html_document
 ---
 
@@ -35,7 +35,15 @@ basicCN + geom_boxplot()
 basicCN + geom_boxplot(notch=TRUE,outlier.color = "red") + stat_boxplot(geom ='errorbar') + labs(title="Fancy notch boxplot \n with 2 lines")
 ```
 
+This boxplot shows that the heavy drinker sit mainly in the back.   
+
 ## Numerical Summarys 
+
+```{r}
+favstats(alcohol~Seat,data=ucdavis1)
+```
+
+This summary is telling me that most of the people who sat in the back drink a greater amount of alcohol when compared to people in the front and middle.   
 
 ## Inferential Tests
 
